@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Wonderful</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="file:///C:/Users/GabeCris/Desktop/portifolio/wonderful/images/icons/globe.svg"
+      type="image/x-icon"
+    />
+    <script src="script.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.js"
+      integrity="sha512-qk0XupXlge1h9I63+bC7K8850xgWnUjTgSNkfLnsqc7dWdx4031UbKjKs2cuRxsNXymkSjyzSCiryVouU74zkg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- HEADER MOBILE/TABLET MODAL -->
+    <section class="header-mobile" id="mobile-modal">
+      <nav>
+        <img
+          loading="lazy"
+          onclick="closeMobileModal()"
+          class="close"
+          src="images/icons/close.svg"
+          alt="fechar janela de voto"
+        />
+
+        <ul class="mobile-navigation">
+          <li>
+            <a class="item-mobile" onclick="closeMobileModal()" href="#sobre"
+              >Sobre</a
+            >
+          </li>
+          <li>
+            <a class="item-mobile" onclick="closeMobileModal()" href="#top7"
+              >Top7</a
+            >
+          </li>
+          <li>
+            <a class="item-mobile" onclick="closeMobileModal()" href="#fotos"
+              >Fotos</a
+            >
+          </li>
+          <li>
+            <a class="item-mobile" onclick="closeMobileModal()" href="#more"
+              >Mais</a
+            >
+          </li>
+          <li>
+            <button
+              onclick="closeMobileModal(), openModal()"
+              class="item button"
+            >
+              Votar
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- MODAL VOTE -->
+    <section id="modal" class="container-modal">
+      <section id="popup-modal" class="popup-modal">
+        <p>Obrigado pelo voto!</p>
+      </section>
+
+      <img
+        onclick="closeModal()"
+        class="close"
+        src="images/icons/close.svg"
+        alt="fechar janela de voto"
+      />
+      <h1 class="modal-title">Qual a sua maravilha favorita?</h1>
+
+      <section class="labels">
+        <label class="place-vote">
+          <div class="vote">
+            <input
+              checked
+              id="teste"
+              type="radio"
+              name="vote"
+              value="Chichen Itza"
+            />
+            <img
+              src="images/votes/chichen-vote.jpg"
+              alt="votar no chichen itza"
+            />
+            <p>Chichen Itza</p>
+          </div>
+        </label>
+
+        <label class="place-vote">
+          <div class="vote">
+            <input type="radio" name="vote" value="Coliseu" />
+            <img src="images/votes/coliseu-vote.jpg" alt="votar no coliseu" />
+            <p>Coliseu</p>
+          </div>
+        </label>
+
+        <label class="place-vote">
+          <div class="vote">
+            <input type="radio" name="vote" value="Petra" />
+            <img src="images/votes/petra-vote" alt="votar no petra" />
+            <p>Petra</p>
+          </div>
+        </label>
+
+        <label class="place-vote">
+          <div class="vote">
+            <input type="radio" name="vote" value="Muralha da China" />
+            <img
+              src="images/votes/muralha-vote.jpg"
+              alt="votar na muralha da china"
+              loading="lazy"
+            />
+            <p>Muralha china</p>
+          </div>
+        </label>
+      </section>
+
+      <section class="labels">
+        <label class="place-vote">
+          <div class="vote">
+            <input type="radio" name="vote" value="Machu Picchu" />
+            <img
+              src="images/votes/macchu-vote.jpg"
+              alt="votar no machu picchu"
+              loading="lazy"
+            />
+            <p>Machu picchu</p>
+          </div>
+        </label>
+
+        <label class="place-vote">
+          <div class="vote">
+            <input type="radio" name="vote" value="Taj Mahal" />
+            <img
+              src="images/votes/taj-vote.jpg"
+              alt="votar no taj mahal"
+              loading="lazy"
+            />
+            <p>Taj mahal</p>
+          </div>
+        </label>
+
+        <label class="place-vote">
+          <div class="vote">
+            <input type="radio" name="vote" value="Cristo Redentor" />
+            <img
+              src="images/votes/cristo-vote.jpg"
+              alt="votar no cristo redentor"
+              loading="lazy"
+            />
+            <p>Cristo Redentor</p>
+          </div>
+        </label>
+      </section>
+
+      <button id="button-vote" onclick=" vote()" class="button">Votar</button>
+      <p class="msg-vote" id="msg-vote-id">Você votou: XXXXX</p>
+    </section>
+
+    <!-- HOME -->
+    <a name="home"></a>
+    <section class="home container">
+      <header class="header-home">
+        <nav class="navigation-home">
+          <a href="#home"
+            ><img
+              class="logo"
+              src="images/icons/logo.svg"
+              alt="icone wonderful"
+              loading="lazy"
+          /></a>
+          <img
+            class="menu"
+            onclick="openMobileModal()"
+            src="images/icons/menu.svg"
+            alt="menu"
+            loading="lazy"
+          />
+          <ul class="navigation-items">
+            <li><a class="item" href="#sobre">Sobre</a></li>
+            <li><a class="item" href="#top7">Top7</a></li>
+            <li><a class="item" href="#fotos">Fotos</a></li>
+            <li><a class="item" href="#more">Mais</a></li>
+            <li>
+              <button onclick="openModal()" class="item button">Votar</button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="hero-container">
+        <h1 data-rellax-speed="-5" class="title-hero rellax">
+          As sete maravilhas do mundo
+        </h1>
+        <div class="background-hero">
+          <img
+            id="mountain-mobile"
+            src="images/background2.svg"
+            alt="montanha"
+            loading="lazy"
+          />
+          <img
+            data-rellax-speed="0"
+            class="mountain mountain1 rellax"
+            src="images/mountains/mountain1.svg"
+            alt="montanha"
+            loading="lazy"
+          />
+          <img
+            data-rellax-speed="1"
+            class="mountain mountain2 rellax"
+            src="images/mountains/mountain2.svg"
+            alt="montanha"
+            loading="lazy"
+          />
+          <img
+            data-rellax-speed="4"
+            class="mountain mountain3 rellax"
+            src="images/mountains/mountain3.svg"
+            alt="montanha"
+            loading="lazy"
+          />
+        </div>
+      </main>
+      <div class="triangle">
+        <div></div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <a name="sobre"></a>
+    <section class="about">
+      <h2 class="title-section">Sobre</h2>
+      <p class="about-text">
+        As 7 maravilhas do mundo moderno foram definidas a partir de uma votação
+        mundial que contava com cerca de 200 monumentos inscritos no ano de
+        2007. Porém foram reduzidos os eleitos, até sobrarem somente 21
+        finalistas que foram avaliados e escolhidos por um grupo de arquitetos
+        liderados pelo ex-diretor da UNESCO. Os critérios usados para definir o
+        top7 foram o de beleza, complexidade, valor histórico, relevância
+        cultural e significado arquitetônico.
+      </p>
+    </section>
+    <div class="triangle"></div>
+
+    <!-- TOP7 -->
+    <a name="top7"></a>
+    <section class="top7 container">
+      <h2 class="title-section">Top7</h2>
+      <section class="place-container">
+        <div class="place-image place1">
+          <img
+            src="images/flags/mexico.svg"
+            alt="bandeira do méxico"
+            loading="lazy"
+          />
+          <p class="place-name">Chichen itza</p>
+        </div>
+        <div class="text-content">
+          <p class="place-text">
+            Chichén Itzá foi uma das principais cidades do povo maia e é um dos
+            sítios arqueológicos mais visitados no México. Cerca de 1,5 milhão
+            de turistas visitam as ruínas a cada ano. A cidade de Chichén Itzá
+            foi construída entre séculos IX e XII e abandonada em 670 d.C. O
+            ponto alto da visita é , sem dúvidas, El Castillo, também conhecido
+            como a Pirâmide de Kukulcán
+          </p>
+        </div>
+      </section>
+
+      <section class="place-container">
+        <div class="place-image place2">
+          <p class="place-name">Coliseu</p>
+          <img
+            src="images/flags/italy.svg"
+            alt="bandeira da itália"
+            loading="lazy"
+          />
+        </div>
+        <div class="text-content">
+          <p class="place-text">
+            Um dos monumentos mais famosos do mundo o Coliseu que atrai milhões
+            de turistas todos os anos. O suntuoso símbolo do Império Romano,
+            cuja construção foi iniciada pelo Imperador Vespasiano em 72 d.C.,
+            foi palco de combate entre gladiadores e batalhas com animais,
+            performances que costumavam ser assistidas por um ávido público de
+            até 73 mil pessoas.
+          </p>
+        </div>
+      </section>
+
+      <section class="place-container">
+        <div class="place-image place3">
+          <img
+            src="images/flags/jordan.svg"
+            alt="bandeira da jordânia"
+            loading="lazy"
+          />
+          <p class="place-name">Petra</p>
+        </div>
+        <div class="text-content">
+          <p class="place-text">
+            A paisagem desértica da Jordânia é recortada por montanhas
+            imponentes e de tom avermelhado, esculpidas pelo vento ao longo de
+            milhares de anos. No meio destas montanhas surgiu Petra.
+            Estabelecida possivelmente já em 312 a.C. como a capital dos árabes
+            nabateus,o local foi importante e se desenvolveu ao longo da Rota da
+            Seda. No auge, Petra abrigou cerca de 30 mil pessoas.
+          </p>
+        </div>
+      </section>
+
+      <section class="place-container">
+        <div class="place-image place4">
+          <p class="place-name">Muralha da China</p>
+          <img
+            src="images/flags/chine.svg"
+            alt="bandeira da china"
+            loading="lazy"
+          />
+        </div>
+        <div class="text-content">
+          <p class="place-text">
+            A construção se iniciou no século 7 a.C. e continuou por mais de
+            2000 mil anos. Ao longo do tempo ela ganhou novos muros, quartéis e
+            torres de observação. A Grande Muralha da China foi construída com
+            propósito de proteger os estados e impérios chineses de invasões
+            inimigas principalmente dos mongóis.
+          </p>
+        </div>
+      </section>
+
+      <section class="place-container">
+        <div class="place-image place5">
+          <img
+            src="images/flags/peru.svg"
+            alt="bandeira do peru"
+            loading="lazy"
+          />
+          <p class="place-name">Machu picchu</p>
+        </div>
+        <div class="text-content">
+          <p class="place-text">
+            A cidade perdida dos Incas exala energia e permite aos visitantes
+            desvendar um pouquinho de um povo que guardava conhecimento muito
+            avançado, especialmente para a época. O sítio arqueológico está
+            2.450 metros acima do nível do mar e foi povoado entre os anos de
+            1450 a 1540. As famílias que lá viviam cultivavam, principalmente,
+            milho e batata e deixaram a cidade antes da chegada dos espanhóis.
+          </p>
+        </div>
+      </section>
+
+      <section class="place-container">
+        <div class="place-image place6">
+          <p class="place-name">Taj mahal</p>
+          <img
+            src="images/flags/india.svg"
+            alt="bandeira da india"
+            loading="lazy"
+          />
+        </div>
+        <div class="text-content">
+          <p class="place-text">
+            O Taj Mahal é um mausoléu construído pelo Imperador Shah Jahãn, em
+            homenagem à sua esposa falecida Mumtāz Maḥal, entre 1632 e 1653. Em
+            1983, o Taj Mahal foi declarado Patrimônio da Humanidade pela
+            Unesco. Estando em Agra você pode optar fazer um tour ao Taj Mahal
+            com todas as explicações de um guia.
+          </p>
+        </div>
+      </section>
+
+      <section class="place-container">
+        <div class="place-image place7">
+          <img
+            src=" images/flags/brazil.svg"
+            alt="bandeira do brasil"
+            loading="lazy"
+          />
+          <p class="place-name">Cristo Redentor</p>
+        </div>
+        <div class="text-content">
+          <p class="place-text">
+            A estátua está localizada no topo do Morro do Corcovado a 709 metros
+            sobre o nível do mar. O Cristo Redentor possui 30 metros de altura e
+            está sobre uma base de 8 metros. Seus braços estendidos alcançam 28
+            metros. O Cristo Redentor é um dos Pontos turísticos do Rio de
+            Janeiro mais visitados!
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- FAVORITE -->
+    <section class="favorite container">
+      <h3>Qual sua maravilha favorita?</h3>
+      <button onclick="openModal()" class="button button-white">Votar</button>
+    </section>
+    <div class="triangle"></div>
+
+    <!-- FOTOS -->
+    <a name="fotos"></a>
+    <section class="photos">
+      <h2 class="title-section">Fotos</h2>
+      <section class="cards">
+        <div onclick="previousSlide()" class="button-arrow">
+          <img
+            class="arrow"
+            src="images/icons/left-arrow.svg"
+            alt="foto anterior"
+            loading="lazy"
+            loading="lazy"
+          />
+        </div>
+
+        <section class="card-photo card-aside">
+          <div id="card-img-left" class="img"></div>
+        </section>
+
+        <section class="card-photo">
+          <div id="card-img-center" class="img"></div>
+          <h4 id="card-name-center" class="card-title"></h4>
+        </section>
+
+        <section class="card-photo card-aside">
+          <div id="card-img-right" class="img"></div>
+        </section>
+
+        <div onclick="nextSlide()" class="button-arrow">
+          <img
+            class="arrow"
+            src="images/icons/right-arrow.svg"
+            alt="próxima foto"
+            loading="lazy"
+          />
+        </div>
+      </section>
+      <ul id="slide-button"></ul>
+    </section>
+
+    <!-- MAIS -->
+    <a name="more"></a>
+    <section class="more">
+      <h2 class="title-section">Mais</h2>
+      <p class="more-text">
+        Havia também as 7 maravilhas da antiguidade, que foram escolhidas como
+        as tais, por poetas, matemáticos, e historiadores do século 2 a.C.
+        Dentre essas maravilhas da antiguidade, somente uma ainda existe hoje em
+        dia, as famosas Pirâmides de Gizé, localizadas no norte do Egito, na
+        África.
+      </p>
+      <div class="more-image">
+        <img
+          src="images/places/piramide"
+          alt="pirâmides do egito"
+          loading="lazy"
+        />
+
+        <div class="bg"><p>A Grande Pirâmide de Gizé</p></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+      <a href="#home">
+        <img
+          class="logo-footer"
+          src="images/icons/logo.svg"
+          alt="logo wonderful"
+        />
+      </a>
+      <footer>
+        <nav class="footer-navigation">
+          <a
+            href="https://www.linkedin.com/in/gabriel-crisanto/"
+            target="_blank"
+          >
+            <img
+              src="images/icons/linkedin.svg"
+              alt="ir para linkedin"
+              loading="lazy"
+            />
+          </a>
+          <a href="https://github.com/GabeCris" target="_blank">
+            <img
+              src="images/icons/github.svg"
+              alt="ir para github"
+              loading="lazy"
+            />
+          </a>
+        </nav>
+        <p class="copyright">&copy GabeCris</p>
+        <a href="#home">
+          <img
+            id="back"
+            src="images/icons/back.svg"
+            alt="voltar ao topo"
+            loading="lazy"
+          />
+        </a>
+      </footer>
+    </section>
+  </body>
+</html>
