@@ -564,7 +564,7 @@ img {
   height: 100vh;
   position: fixed;
   transition: 0.5s;
-  transform: translateY(-100%);
+  transform: translateY(-200%);
   background-color: var(--dark-brown-color);
 }
 
@@ -645,13 +645,13 @@ img {
   background-size: cover;
   z-index: 15;
   transition: 0.5s;
-  transform: translateY(-150%);
+  transform: translateY(-200%);
   background-image: url("../images/background.svg");
 }
 
 .hide-modal {
   transition: 0.5s;
-  transform: translateY(-150%);
+  transform: translateY(-200%);
 }
 
 .show-modal {
@@ -993,11 +993,13 @@ body::-webkit-scrollbar-thumb {
   }
 
   .container-modal .modal-title {
-    font-size: 45px;
-    width: 85%;
+    font-size: 35px;
+    width: 80%;
+    margin-bottom: 15px;
   }
 
   .container-modal {
+
     justify-content: center;
   }
 
@@ -1010,13 +1012,13 @@ body::-webkit-scrollbar-thumb {
   }
 
   .vote img {
-    margin: 10px;
-    border: 6px solid var(--white-color);
+    margin: 5px;
+    border: 3px solid var(--white-color);
 
     z-index: 8;
-    width: 85px;
-    height: 85px;
-    transform: translateX(20px);
+    width: 45px;
+    height: 45px;
+    transform: translateX(0px);
   }
 
   .vote p {
@@ -1048,7 +1050,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   .hero-container .title-hero {
-    z-index: 3;
+    z-index: 10;
     width: 90%;
     margin: 0px 0px 150px 0px;
     text-align: center;
