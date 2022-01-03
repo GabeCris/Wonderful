@@ -645,13 +645,13 @@ img {
   background-size: cover;
   z-index: 15;
   transition: 0.5s;
-  transform: translateY(-100%);
+  transform: translateY(-150vh);
   background-image: url("../images/background.svg");
 }
 
 .hide-modal {
   transition: 0.5s;
-  transform: translateY(-100%);
+  transform: translateY(-150vh);
 }
 
 .show-modal {
@@ -983,6 +983,7 @@ body::-webkit-scrollbar-thumb {
 
 /* MEDIA TABLET */
 
+
 @media (min-width: 576px) and (max-width: 1081.98px) {
   /* MODAL */
 
@@ -1047,9 +1048,9 @@ body::-webkit-scrollbar-thumb {
   }
 
   .hero-container .title-hero {
-    z-index: 1;
+    z-index: 3;
     width: 90%;
-    margin: 0px;
+    margin: 0px 0px 150px 0px;
     text-align: center;
     font-size: 60px;
   }
