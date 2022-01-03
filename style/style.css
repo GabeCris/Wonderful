@@ -645,13 +645,13 @@ img {
   background-size: cover;
   z-index: 15;
   transition: 0.5s;
-  transform: translateY(-150vh);
+  transform: translateY(-150%);
   background-image: url("../images/background.svg");
 }
 
 .hide-modal {
   transition: 0.5s;
-  transform: translateY(-150vh);
+  transform: translateY(-150%);
 }
 
 .show-modal {
