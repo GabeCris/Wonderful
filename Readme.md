@@ -12,6 +12,7 @@
 Neste projeto resolvi juntar alguns conceitos para desenvolver um layout bonito, simples e responsivo de uma landing page que tem como conteúdo principal, apresentar as 7 maravilhas do mundo e resumí-las em imagens e parágrafos sobre as mesmas.
 <br>
 <br>
+<img src="./assets/Wonderful.gif">
 
 
 ## - Linguagens e conceitos utilizados -
